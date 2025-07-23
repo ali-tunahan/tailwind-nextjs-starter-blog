@@ -173,3 +173,55 @@ input:-webkit-autofill:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
+
+.song-chorus {
+  /* Add some padding and margin for spacing */
+  padding: 1rem;
+  margin: 1.5rem 0;
+
+  /* Add a subtle background color */
+  background-color: #f9fafb; /* Light gray */
+  
+  /* Dark mode background color */
+  @apply dark:bg-gray-800; /* A darker gray for dark mode */
+
+  /* Add a left border for emphasis */
+  border-left: 4px solid #3b82f6; /* Tailwind's blue-500 */
+  
+  /* Dark mode border color */
+  @apply dark:border-blue-400; /* A slightly lighter blue for dark mode border */
+
+  /* Change font style (optional) */
+  font-style: italic;
+
+  /* Adjust font size (optional) */
+  font-size: 1.1rem;
+
+  /* Add a subtle box shadow (optional) */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  /* Dark mode text color */
+  @apply dark:text-gray-200; /* Light gray text for dark mode */
+}
+
+/* Style the blockquote content within the custom class */
+.song-chorus blockquote {
+    /* Remove default blockquote margin and padding */
+    margin: 0;
+    padding: 0;
+
+    /* Inherit font styles */
+    font-style: inherit;
+    font-size: inherit;
+}
+
+/* This is a general example, the selector might need to be more specific */
+.spotify-embed-container iframe {
+  filter: invert(1) hue-rotate(180deg); /* Example filters for dark mode */
+}
+
+/* You might need to adjust filters or apply them only in dark mode */
+.dark .spotify-embed-container iframe {
+  filter: invert(1) hue-rotate(180deg);
+}
