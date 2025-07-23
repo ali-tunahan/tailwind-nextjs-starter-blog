@@ -7,14 +7,16 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is;
-  style-src 'self' 'unsafe-inline';
-  img-src * blob: data:;
-  media-src *.s3.amazonaws.com;
-  connect-src *;
-  font-src 'self';
-  frame-src giscus.app
-`
+  img-src 'self' blob: data:;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app plausible.io *.googletagmanager.com *.twimg.com *.google.com *.github.com open.spotify.com embed.spotify.com;
+  style-src 'self' 'unsafe-inline' *.googleapis.com;
+  base-uri 'self';
+  connect-src 'self' plausible.io open.spotify.com embed.spotify.com;
+  font-src 'self' data:;
+  frame-ancestors 'self';
+  child-src 'self' open.spotify.com embed.spotify.com;
+  frame-src giscus.app youtube.com www.youtube.com open.spotify.com embed.spotify.com;
+`;
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
