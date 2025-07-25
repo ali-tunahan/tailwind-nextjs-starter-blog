@@ -14,6 +14,11 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com/in/ali-tunahan ',
   locale: 'en-US',
   stickyNav: false,
+newsletter: {
+    // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus, beehive
+    // Please add your .env file and modify it according to your selection
+    provider: 'buttondown',
+  },
   search: {
     provider: 'kbar', // kbar or algolia
     kbarConfig: {
