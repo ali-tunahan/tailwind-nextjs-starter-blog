@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Ati\'s Random Blog',
+  title: 'Ati\'s Blog',
   author: 'Ali Tunahan Işık',
-  headerTitle: 'Ati Blog',
+  headerTitle: 'Ali Tunahan Işık Blog',
   description: 'Random things I currently think about',
   language: 'en-us',
   theme: 'light', // system, dark or light
